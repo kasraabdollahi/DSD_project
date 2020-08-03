@@ -14,11 +14,11 @@ module integer_sqrt #(parameter WIDTH = 32, parameter CYCLES = 14)(stall, clk, d
     
     always @(posedge clk) begin
         if(stall == 1)begin
-            state <= s_IDLE;
-            quotient <= 0;
-            remainder <= 0;
-            ready <= 0;
-            c <= CYCLES;
+            state = s_IDLE;
+            quotient = 0;
+            remainder = 0;
+            ready = 0;
+            c = CYCLES;
         end 
         case(state)
             s_IDLE:
